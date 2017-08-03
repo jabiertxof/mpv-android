@@ -95,6 +95,10 @@
 
     <string name="pref_display_in_cutout_title">Extend video into the notch/cutout area</string>
 
+    <string name="pref_ytdl_format_title">Youtube-dl formats</string>
+    <string name="pref_ytdl_format_hint">Format string passed to youtube-dl for quality/format selection. Read the ytdl format string documentation before changing this.</string>
+    <string name="pref_ytdl_format_summary">%s</string>
+
 
     <string name="pref_header_gestures">Touch gestures</string>
 
