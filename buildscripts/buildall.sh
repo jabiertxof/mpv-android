@@ -62,6 +62,7 @@ setup_prefix () {
 	ln -s . "$prefix_dir/local"
 
 	# meson wants to be spoonfed this file, so create it ahead of time
+	# c_link_args + c_args are for shaderc
 	cat >"$prefix_dir/crossfile.txt" <<CROSSFILE
 [binaries]
 c = '$CC'
@@ -69,6 +70,9 @@ cpp = '$CXX'
 ar = '$ndk_triple-ar'
 strip = '$ndk_triple-strip'
 pkgconfig = 'pkg-config'
+[properties]
+c_link_args = ['-L$prefix_dir/lib']
+c_args = ['-I$prefix_dir/include']
 [host_machine]
 system = 'linux'
 cpu_family = '${ndk_triple%%-*}'
