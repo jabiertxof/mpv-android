@@ -6,7 +6,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 24
         // Do NOT bump this to 30 before figuring out the implications of scoped storage
         targetSdkVersion 29
         versionCode 23
